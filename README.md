@@ -1,6 +1,6 @@
 # Kirby CMS Template
 
-### Get The Latest kirby Plainkit
+### Get The Latest Kirby Plainkit
 ```
 git clone https://github.com/getkirby/plainkit.git
 ```  
