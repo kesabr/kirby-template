@@ -1,0 +1,45 @@
+title: Accordion
+
+type: structure
+
+## set what is displayed in the panel
+columns:
+  title:
+    width: 3/5
+  text:
+    width: 2/5
+    max: 10
+
+
+## field options for the structure list 
+fields:
+  title:
+    label: Titel
+    type: text
+    icon: heading
+
+  text:
+    label: Inhalt
+    extends: fields/writer
+
+  images:
+    label: Bilder
+    type: files
+
+## setting options
+sortBy: title asc # asc or desc for every text field possible
+
+# true is default
+# sortable: false 
+
+# adds new field to the top instead
+# prepend: true 
+
+# a minimum of input that are required
+# min: 
+
+# after max has been reached the plus icon disappears
+# max: 
+
+# adds limit of items before pagination kicks in
+# limit: 

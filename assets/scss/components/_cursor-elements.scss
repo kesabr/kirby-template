@@ -1,0 +1,6 @@
+#text-cursor {
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,74 @@
+:root {
+
+    /* Buttons */
+    --burger-button-width: 60px;
+    --burger-button-height: 40px;
+    --burger-button-stroke: 5px;
+
+
+    /* Typography */
+    --font-size-xxs: clamp(0.7813rem, 0.7788rem + 0.0131vw, 0.8rem);
+    --font-size-xs: clamp(0.9375rem, 0.9295rem + 0.0437vw, 1rem);
+    --font-size-sm: clamp(1.125rem, 1.109rem + 0.0875vw, 1.25rem);
+    --font-size-md: clamp(1.35rem, 1.3228rem + 0.1487vw, 1.5625rem);
+    --font-size-lg: clamp(1.62rem, 1.5773rem + 0.2331vw, 1.9531rem);
+    --font-size-xl: clamp(1.9438rem, 1.88rem + 0.3481vw, 2.4413rem);
+    --font-size-xxl: clamp(2.3325rem, 2.2403rem + 0.5033vw, 3.0519rem);
+    --font-size-xxxl: clamp(2.7994rem, 2.6693rem + 0.7105vw, 3.815rem);
+
+    --line-height-xxs: 1.8;
+    --line-height-xs: 1.6;
+    --line-height-sm: 1.4;
+    --line-height-md: 1.2;
+    --line-height-lg: 1.0;
+    --line-height-xl: 0.8;
+
+    --font-weight-100: 100;
+    --font-weight-200: 200;
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --font-weight-800: 800;
+    --font-weight-900: 900;
+
+
+    /* Colors */
+    --color-primary: rgb(10, 10, 10);
+    --color-secondary: rgb(240, 240, 240);
+    --color-accent: rgb(255, 0, 0);
+
+
+    /* Margins */
+    $spacing-unit: 8px; // Adjust the base spacing unit as needed
+
+    --margin-xxs: calc(.5 * #{$spacing-unit});
+    --margin-xs: calc(1 * #{$spacing-unit});
+    --margin-sm: calc(2 * #{$spacing-unit});
+    --margin-md: calc(4 * #{$spacing-unit});
+    --margin-lg: calc(6 * #{$spacing-unit});
+    --margin-xl: calc(12 * #{$spacing-unit});
+    --margin-xxl: calc(20 * #{$spacing-unit});
+
+
+    /* Container */
+    --container__width: min(100%, 1200px);
+
+
+    /* Breakingpoints */
+    --breakpoint-xs: #{$breakpoint-xs};
+    --breakpoint-sm: #{$breakpoint-sm};
+    --breakpoint-md: #{$breakpoint-md};
+    --breakpoint-lg: #{$breakpoint-lg};
+    --breakpoint-xl: #{$breakpoint-xl};
+
+
+    /* Icons */
+    --icon-size: 60px;
+    --icon-color: var(--color-primary);
+
+
+    /* Links and Anchors*/
+    --link-color: var(--color-accent);
+}

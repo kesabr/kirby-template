@@ -1,0 +1,23 @@
+$container-inline-padding: var(--margin-sm);
+$container-block-padding: var(--margin-xs);
+
+.container {
+    width: 100%;
+    padding-inline: $container-inline-padding;
+    padding-block: $container-block-padding;
+}
+
+div:has(.elements) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 10px;
+    height: 60vh;
+
+    .elements {
+        width: calc(50% - 5px);
+        padding: 20px;
+        height: 50%;
+        background-color: aquamarine;
+    }
+}

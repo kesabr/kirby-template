@@ -1,0 +1,41 @@
+.accoridon-container {
+
+    .accordion-item {
+
+        
+        .item-title {
+            border-top: 1px solid $color-text-primary;
+            padding-block: var(--margin-xxs);
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+
+        }
+        
+        // &:last-of-type .item-title {
+        //     border-bottom: 1px solid $color-text-primary;
+        // }
+
+        .item-content {
+            --item-height: 100vh;
+            height: fit-content;
+            max-height: 0;
+            overflow: hidden;
+            margin-bottom: var(--margin-xs);
+            transition: max-height .5s ease-out;
+
+            &.open {
+                max-height: var(--item-height);
+            }
+
+            .content-text {
+                height: fit-content;
+            }
+
+            figure {
+                aspect-ratio: 3/2;
+            }
+        }
+        
+    }
+}

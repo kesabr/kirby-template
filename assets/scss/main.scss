@@ -1,0 +1,21 @@
+@import 'base/reset';
+
+@import 'utilities/breakingpoints';
+@import 'utilities/variables';
+@import 'base/typography';
+
+@import 'utilities/mixins';
+@import 'utilities/grid';
+@import 'utilities/colors'; 
+@import 'utilities/utility-classes';
+
+@import 'components/images';
+@import 'components/gallery';
+@import 'components/burger-menu';
+@import 'components/arrows';
+@import 'components/cursor-elements';
+@import 'components/accordion';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/general';

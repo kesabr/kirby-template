@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Farrari';
+    src:
+        url('/assets/fonts/farrari-beta.ttf') format("truetype"),
+        url('/assets/fonts/farrari-beta.ttf') format("woff"),
+        url('/assets/fonts/farrari-beta.ttf') format("woff2");
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------------------------------------------------------- */
+
+// Font Families
+$font-family-base: 'Farrari', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+// Sizes
+$font-size-heading: var(--font-size-xl);
+$font-size-subheading: var(--font-size-sm);
+$font-size-text: var(--font-size-sm);
+$font-size-infotext: var(--font-size-sm);
+
+// Line heights
+$line-height-heading: var(--line-height-lg);
+$line-height-subheading: var(--line-height-sm);
+$line-height-text: var(--line-height-sm);
+$line-height-infotext: var(--line-height-sm);
+
+// Weights
+$font-weight-regular: 'wght' var(--font-weight-400);
+$font-weight-bold: 'wght' var(--font-weight-700);
+
+// Colors
+$color-text-primary: var(--color-primary);
+$color-text-secondary: var(--color-secondary);
+$color-text-accent: var(--color-accent);
+
+@mixin font-heading {
+    font-size: $font-size-heading;
+    line-height: $line-height-heading;
+    font-variation-settings: $font-weight-bold;
+}
+
+@mixin font-subheading {
+    font-size: $font-size-subheading;
+    line-height: $line-height-subheading;
+    font-variation-settings: $font-weight-bold;
+}
+
+@mixin font-text {
+    font-size: $font-size-text;
+    line-height: $line-height-text;
+    font-variation-settings: $font-weight-regular;
+}
+
+@mixin font-infotext {
+    font-size: $font-size-infotext;
+    line-height: $line-height-infotext;
+    font-family: $font-family-base;
+    font-variation-settings: $font-weight-regular;
+}
+
+// Heading Styles
+h1,
+h2,
+h3 {
+    @include font-heading;
+    color: inherit;
+}
+
+h4,
+h5,
+h6 {
+    @include font-subheading;
+    color: inherit;
+}
+
+// Body Styles
+body {
+    @include font-text;
+    font-family: $font-family-base;
+    color: $color-text-primary;
+}
+
+.heading {
+    @include font-heading;
+}
+
+.subheading {
+    @include font-subheading;
+}
+
+.text {
+    @include font-text;
+}
+
+.infotext {
+    @include font-infotext;
+}
+
+a {
+    color: var(--link-color);
+}
