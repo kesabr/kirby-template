@@ -1,17 +1,15 @@
 <?php
 
 /**
- *  Gallery – with glide.js
+ *  Gallery
  * 
  *  Builds on: 
  * 
+ *  "assets/js/components/gallery.js"
  *  "assets/scss/components/gallery.scss"
- *      "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss"
-
  *  "site/snippets/blocks/gallery.php"
-
- *  "site/snippets/components/glide.php"
- *      "node_modules/@glidejs/glide/dist/glide.min.js"
+ *  "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss"
+ *  "node_modules/@glidejs/glide/dist/glide.min.js"
 */
 
 
@@ -21,7 +19,7 @@ use Kirby\Cms\Html;
 $caption = $block->caption();
 $crop = $block->crop()->isTrue();
 $ratio = $block->ratio()->or('auto');
-
+ 
 // Set the default ratio to 3/2 if it is 'auto'
 $ratio = ($ratio == 'auto') ? '3/2' : $ratio;
 
@@ -33,31 +31,27 @@ $uniqueId = 'block_' . uniqid();
 ?>
 
 <div id="<?= $uniqueId ?>" class="block block-type-<?= $block->type() ?> grid-span-16" <?= ($ratio != 'auto') ? Html::attr(['data-ratio' => $ratio, 'data-crop' => $crop], null, ' ') : '' ?>>
-    <div class="glide | gallery-container">
-
-        <div class="glide__track" data-glide-el="track">
-            <div class="glide__slides | gallery-slider">
-                <?php foreach ($galleryImages as $image) : ?>
-                        <figure class="glide__slide | gallery-item">
-                            <img src="<?= $image->url() ?>" alt="" loading="lazy">
-                        </figure>
-                <?php endforeach ?>
-            </div>
-        </div>
-
-        <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">PREV</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">NEXT</button>
-        </div>
-
+    <div class="gallery-slider">
+        <?php foreach ($galleryImages as $image) : ?>
+            <?php $index = $galleryImages->indexOf($image) ?>
+            <figure class="gallery-item <?= $index === 0 ? 'active' : '' ?>">
+                <img src="<?= $image->url() ?>" alt="" loading="lazy">
+            </figure>
+        <?php endforeach ?>
     </div>
 
+    <div class="slider-nav">
+        <?php foreach ($galleryImages as $image) : ?>
+            <?php
+            $index = $galleryImages->indexOf($image);
+            ?>
+            <div class="slider-nav-circle <?= $index === 0 ? 'active' : '' ?>" data-index="<?= $index ?>"></div>
+        <?php endforeach ?>
+    </div>
 
 </div>
 
 <script>
-    /** Applies the data-ratio to the gallery */
-
     // Wrap the gallery logic in a function
     function initGallery(galleryId) {
         // Get the gallery element

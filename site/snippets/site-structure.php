@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Kirby Preset</title>
+    <title><?= $site->title() ?></title>
     <!-- load local copy of jquery -->
     <?= js('node_modules/jquery/dist/jquery.min.js') ?>
 
@@ -40,6 +40,10 @@
         <?php endif ?>
     </footer>
 
+    <?php if ($foot = $slots->foot()) : ?>
+        <?= $foot ?>
+    <?php endif ?>
+    
     <?= js('/assets/js/main.js', ['type' => 'module']) ?>
     <?= js('@auto', ['type' => 'module']) ?>
     <?php if ($foot = $slots->foot()) : ?>

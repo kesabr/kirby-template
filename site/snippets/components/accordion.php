@@ -1,4 +1,12 @@
 <?php
+/**
+ *  The Accordion builds on: 
+ * 
+ *  "site/blueprint/fields/accordion.yml"
+ *  "assets/scss/components/accordion.scss"
+ *  "site/snippets/components/accordion.php"
+*/
+
 // Create a structure collection with `toStructure()`
 $items = $page->accordion()->toStructure();
 ?>

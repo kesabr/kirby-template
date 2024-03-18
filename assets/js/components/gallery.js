@@ -1,4 +1,15 @@
-/** 1. Gallery Handlers */
+/**
+ *  Gallery
+ * 
+ *  Builds on: 
+ * 
+ *  "assets/js/components/gallery.js"
+ *  "assets/scss/components/gallery.scss"
+ *  "site/snippets/blocks/gallery.php"
+ *  "node_modules/@glidejs/glide/src/assets/sass/glide.core.scss"
+ *  "node_modules/@glidejs/glide/dist/glide.min.js"
+*/
+
 
 // Function to handle each gallery's logic
 function setupGallery() {

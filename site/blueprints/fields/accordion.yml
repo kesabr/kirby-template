@@ -1,3 +1,9 @@
+# # The Accordion builds on: 
+
+# "site/blueprint/fields/accordion.yml"
+# "assets/scss/components/accordion.scss"
+# "site/snippets/components/accordion.php"
+
 title: Accordion
 
 type: structure

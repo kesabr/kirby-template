@@ -19,3 +19,9 @@
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/general';
+
+/* Libraries */
+
+// Glide => to make glide working "glide.core.scss" or "glide.core.min.css" as well as the "glide.min.js" must be included!
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import '../../node_modules/@glidejs/glide/src/assets/sass/glide.theme';

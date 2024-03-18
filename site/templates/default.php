@@ -1,6 +1,6 @@
-<?php 
+<?php
 /* MAIN SNIPPET * must be loaded in every template */
-snippet('site-structure', slots: true) 
+snippet('site-structure', slots: true)
 ?>
 
 <?php slot('head') ?>
@@ -13,10 +13,19 @@ snippet('site-structure', slots: true)
 
 <?php slot('default') ?>
 <!-- Add elements that should be displayed in the <main> -->
+<?= snippet('components/layout') ?>
+
 <?php endslot() ?>
 
 <?php slot('footer') ?>
 <!-- Add elements that should be displayed in the <main> -->
+<?php endslot() ?>
+
+<?php slot('foot') ?>
+<!-- Add elements that should be displayed right before the end of the </body> -->
+
+<?= snippet('components/glide') ?>
+
 <?php endslot() ?>
 
 <?php endsnippet() ?>

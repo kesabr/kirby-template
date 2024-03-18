@@ -15,5 +15,6 @@
     </nav>
 
     <h2><?= $site->title() ?></h2>
+    <h4><?= $page->title() ?></h4>
 
 </div>

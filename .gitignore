@@ -2,8 +2,5 @@ content/
 kirby/
 media/
 vendor/
-composer.json
-composer.lock
+node_modules/
 index.php
-package-lock.json
-package.json
