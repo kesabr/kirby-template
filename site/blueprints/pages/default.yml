@@ -18,17 +18,3 @@ columns:
         template: default
       files:
         type: files
-
-  sandbox:
-    width: 1/1
-    sections:
-      morefields:
-        type: fields
-        fields:
-          accordion:
-            extends: fields/accordion
-            label: List
-
-          layout:
-            label: Banana
-            extends: fields/layout

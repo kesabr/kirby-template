@@ -1,1 +1,16 @@
 
+.heading {
+    @include font-heading;
+}
+
+.subheading {
+    @include font-subheading;
+}
+
+.text {
+    @include font-text;
+}
+
+.infotext {
+    @include font-infotext;
+}

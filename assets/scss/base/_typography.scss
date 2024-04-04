@@ -82,22 +82,6 @@ body {
     color: $color-text-primary;
 }
 
-.heading {
-    @include font-heading;
-}
-
-.subheading {
-    @include font-subheading;
-}
-
-.text {
-    @include font-text;
-}
-
-.infotext {
-    @include font-infotext;
-}
-
 a {
     color: var(--link-color);
 }

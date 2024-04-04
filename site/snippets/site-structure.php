@@ -39,13 +39,10 @@
             <?= $footer ?>
         <?php endif ?>
     </footer>
-
-    <?php if ($foot = $slots->foot()) : ?>
-        <?= $foot ?>
-    <?php endif ?>
     
     <?= js('/assets/js/main.js', ['type' => 'module']) ?>
     <?= js('@auto', ['type' => 'module']) ?>
+    
     <?php if ($foot = $slots->foot()) : ?>
         <?= $foot ?>
     <?php endif ?>

@@ -61,6 +61,8 @@ $items = $page->accordion()->toStructure();
     document.addEventListener('DOMContentLoaded', function() {
         const accordionItems = document.querySelectorAll('.accordion-item');
 
+        // Add the opening and closing functionality to each accordion item
+
         accordionItems.forEach((item) => {
             const itemTitle = item.querySelector('.item-title');
             const itemContent = item.querySelector('.item-content');

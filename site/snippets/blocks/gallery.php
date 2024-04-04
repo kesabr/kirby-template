@@ -12,7 +12,7 @@
 
  *  "site/snippets/components/glide.php"
  *      "node_modules/@glidejs/glide/dist/glide.min.js"
-*/
+ */
 
 
 use Kirby\Cms\Html;
@@ -38,16 +38,22 @@ $uniqueId = 'block_' . uniqid();
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides | gallery-slider">
                 <?php foreach ($galleryImages as $image) : ?>
-                        <figure class="glide__slide | gallery-item">
-                            <img src="<?= $image->url() ?>" alt="" loading="lazy">
-                        </figure>
+                    <figure class="glide__slide | gallery-item">
+                        <img src="<?= $image->url() ?>" alt="" loading="lazy">
+                    </figure>
                 <?php endforeach ?>
             </div>
         </div>
 
-        <div class="glide__arrows" data-glide-el="controls">
-            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">PREV</button>
-            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">NEXT</button>
+        <div class="glide__arrows | arrows-nav" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left | arrow" data-orientation="left" data-glide-dir="<"></button>
+            <button class="glide__arrow glide__arrow--right | arrow" data-orientation="right" data-glide-dir=">"></button>
+        </div>
+
+        <div class="glide__bullets | bullets-nav" data-glide-el="controls[nav]">
+            <?php foreach ($galleryImages as $index => $image) : ?>
+                <button class="glide__bullet | nav-bullet" data-glide-dir="=<?= $image->indexOf() ?>"></button>
+            <?php endforeach ?>
         </div>
 
     </div>
