@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2874e5d067b25729e16429c1fdcfa0fc",
+    "content-hash": "51f857a034277473515787cfd7cbe776",
     "packages": [
         {
             "name": "christian-riesen/base32",
@@ -1232,6 +1232,46 @@
                 }
             ],
             "time": "2024-01-23T14:51:35+00:00"
+        },
+        {
+            "name": "zephir/kirby-cookieconsent",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zephir/kirby-cookieconsent.git",
+                "reference": "8772ea3d0c40599aef47cb1cf90530c989be3343"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zephir/kirby-cookieconsent/zipball/8772ea3d0c40599aef47cb1cf90530c989be3343",
+                "reference": "8772ea3d0c40599aef47cb1cf90530c989be3343",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.1"
+            },
+            "type": "kirby-plugin",
+            "autoload": {
+                "psr-4": {
+                    "Zephir\\Cookieconsent\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marc Stampfli",
+                    "email": "marc@zephir.ch"
+                }
+            ],
+            "description": "Kirby cookieconsent plugin",
+            "support": {
+                "issues": "https://github.com/zephir/kirby-cookieconsent/issues",
+                "source": "https://github.com/zephir/kirby-cookieconsent/tree/3.1.0"
+            },
+            "time": "2024-02-16T11:19:59+00:00"
         }
     ],
     "packages-dev": [],

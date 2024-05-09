@@ -24,7 +24,8 @@
   "require": {
     "php": ">=8.0.0 < 8.3.0",
     "getkirby/cms": "^4.2",
-    "michnhokn/kirby3-cookie-banner": "^1.0"
+    "michnhokn/kirby3-cookie-banner": "^1.0",
+    "zephir/kirby-cookieconsent": "^3.1"
   },
   "config": {
     "allow-plugins": {

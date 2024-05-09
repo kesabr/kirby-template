@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $site->title() ?></title>
-    <!-- load local copy of jquery -->
+
+    <?= snippet('cookieconsentCss') ?>
+
     <?= js('node_modules/jquery/dist/jquery.min.js') ?>
 
     <?= css('/assets/css/templates/main.css') ?>
@@ -47,14 +49,7 @@
         <?= $foot ?>
     <?php endif ?>
 
-    <?php snippet('cookie-modal', [
-        'assets' => true,
-        'showOnFirst' => true,
-        'features' => [
-            'analytics' => 'Analytics',
-            // 'mapbox' => 'Mapbox'
-        ]
-    ]) ?>
+    <?= snippet('cookieconsentJs') ?>
 </body>
 
 </html>

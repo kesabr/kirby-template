@@ -1,5 +1,17 @@
+# Ignore the whole kirby folder (reinstallation: `composer install`)
 /kirby/
+
+# Ignore media folder that get's created at the root by Kirby CMS
 /media/
+
+# Ignore the vendor folder
 /vendor/
+
+# Ignore node modules (reinstallation: `npm install`)
 /node_modules/
+
+# Ignore the javascript templates (get created by webpack CLI)
 /assets/js/templates/
+
+# Ignore all Plugins (reinstallation: `composer install`)
+/site/plugins/
