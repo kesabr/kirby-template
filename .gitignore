@@ -1,4 +1,5 @@
-kirby/
-media/
-vendor/
-node_modules/
+/kirby/
+/media/
+/vendor/
+/node_modules/
+/assets/js/templates/

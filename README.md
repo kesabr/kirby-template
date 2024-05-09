@@ -69,7 +69,9 @@ accordion:
 ``` 
 
 and render it by calling the snippet:  
-`<?= snippet('components/accordion') ?>`
+```
+<?= snippet('components/accordion') ?>
+```
 
 #### Make Changes
 Change the structure or how the accordion get's handled in the `site/snippets/components/accordion.php` file
@@ -88,7 +90,6 @@ You can get the preset menu button by adding the following HTML element:
 ```
 
 Change the button's stlye inside the `assets/scss/components/_burger-menu.scss`  
-
 there is no button handling there yet. An animation will be triggered if a `open` class is added or removed from the `menu-button`  
 
 
@@ -134,13 +135,13 @@ The content of that attribute will be shown by the cursor
 ```
 <span class="arrow" data-orientation="left"></span>
 ```
-The Arrow's direction can be changed by changing the the value of `data-orientation` to the following:  
-- `left`
-- `right`
-- `up`
-- `down`
-- `up-left`
-- `down-left`
-- `up-right`
-- `down-right`
+The Arrow's direction can be changed as followed:  
+- `data-orientation="left"`
+- `data-orientation="right"`
+- `data-orientation="up"`
+- `data-orientation="down"`
+- `data-orientation="up-left"`
+- `data-orientation="down-left"`
+- `data-orientation="up-right"`
+- `data-orientation="down-right"`
 
