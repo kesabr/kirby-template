@@ -113,7 +113,7 @@ get more info about it on [Kirby Reference](https://getkirby.com/docs/reference/
 
 To change the Layout's structure see this `site/snippets/components/layout.php` file  
 
-The Layout has no direct Styling since it is only stucturing elements together. The stucture is based on the grid system within this template:  
+The layout structure styling happens here:  
 `assets/scss/utilities/_grid.scss`
 
 
