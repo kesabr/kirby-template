@@ -8,7 +8,7 @@
 /vendor/
 
 # Ignore node modules (reinstallation: `npm install`)
-node_modules/*
+/node_modules/
 
 # Ignore the javascript templates (get created by webpack CLI)
 /assets/js/templates/
