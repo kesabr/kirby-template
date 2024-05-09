@@ -11,53 +11,39 @@
 
 /* -------------------------------------------------------- */
 
-// Font Families
-$font-family-base: 'Farrari', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
-// Sizes
-$font-size-heading: var(--font-size-xl);
-$font-size-subheading: var(--font-size-sm);
-$font-size-text: var(--font-size-sm);
-$font-size-infotext: var(--font-size-sm);
-
-// Line heights
-$line-height-heading: var(--line-height-lg);
-$line-height-subheading: var(--line-height-sm);
-$line-height-text: var(--line-height-sm);
-$line-height-infotext: var(--line-height-sm);
-
-// Weights
-$font-weight-regular: 'wght' var(--font-weight-400);
-$font-weight-bold: 'wght' var(--font-weight-700);
-
-// Colors
-$color-text-primary: var(--color-primary);
-$color-text-secondary: var(--color-secondary);
-$color-text-accent: var(--color-accent);
-
 @mixin font-heading {
-    font-size: $font-size-heading;
-    line-height: $line-height-heading;
-    font-variation-settings: $font-weight-bold;
+    font-size: var(--font-size-xl);
+    line-height: var(--line-height-xl);
+    font-weight: var(--font-weight-bold);
+    font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 @mixin font-subheading {
-    font-size: $font-size-subheading;
-    line-height: $line-height-subheading;
-    font-variation-settings: $font-weight-bold;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-lg);
+    font-weight: var(--font-weight-bold);
+    font-variation-settings: 'wght' var(--font-weight-bold);
+}
+
+@mixin font-small-heading {
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-bold);
+    font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 @mixin font-text {
-    font-size: $font-size-text;
-    line-height: $line-height-text;
-    font-variation-settings: $font-weight-regular;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-normal);
+    font-variation-settings: 'wght' var(--font-weight-normal);
 }
 
 @mixin font-infotext {
-    font-size: $font-size-infotext;
-    line-height: $line-height-infotext;
-    font-family: $font-family-base;
-    font-variation-settings: $font-weight-regular;
+    font-size: var(--font-size-xs);
+    line-height: var(--line-height-sm);
+    font-weight: var(--font-weight-normal);
+    font-variation-settings: 'wght' var(--font-weight-normal);
 }
 
 // Heading Styles
@@ -78,10 +64,10 @@ h6 {
 // Body Styles
 body {
     @include font-text;
-    font-family: $font-family-base;
-    color: $color-text-primary;
+    font-family: var(--font-family-base);
+    color: var(--text-color);
 }
 
 a {
-    color: var(--link-color);
+    color: var(--link-link);
 }

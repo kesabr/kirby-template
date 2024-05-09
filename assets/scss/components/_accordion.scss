@@ -13,7 +13,7 @@
 
         
         .item-title {
-            border-top: 1px solid $color-text-primary;
+            border-top: var(--border-width) solid var(--border-color);
             padding-block: var(--margin-xxs);
             display: flex;
             justify-content: space-between;

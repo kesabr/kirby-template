@@ -1,17 +1,25 @@
 # Kirby CMS Template
 
-### Get The Latest Kirby Plainkit
+## Get started
+
+### Install Kirby CMS and Plugins
 ```
-git clone https://github.com/getkirby/plainkit.git
-```  
-Replace the **site** and **assets** folder from the **plainkit** with the same folders from this template.
+composer install
+```
+
+### Install Package
+```
+npm install
+```
+
+## How to use
 
 The heart of this build is the `site/snippets/site-structure.php`  
 which must be used in every page template.  
 In the `site/templates/default.php` you can find a all use of the `slots()` method for this snippet.  
   
   
-### Use The Following Slots:
+#### Use The Following Slots:
 
 `slot('default')`   most used: this will fill in content inside the `<main>` element  
   
@@ -93,7 +101,9 @@ layout:
 ```
 
 and render it by calling the snippet:  
-`<?= snippet('components/layout') ?>`
+```
+<?= snippet('components/layout') ?>
+```
 
 #### Make Changes
 The single elements that get rendered inside the layout are "kirby block elements"   
@@ -118,4 +128,19 @@ import {
 
 Add elements to your HTML that have a `data-cursor` attribute  
 The content of that attribute will be shown by the cursor  
+
+
+### Arrows
+```
+<span class="arrow" data-orientation="left"></span>
+```
+The Arrow's direction can be changed by changing the the value of `data-orientation` to the following:  
+- `left`
+- `right`
+- `up`
+- `down`
+- `up-left`
+- `down-left`
+- `up-right`
+- `down-right`
 

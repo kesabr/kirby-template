@@ -4,7 +4,7 @@ $arrow-color: var(--icon-color);
 $arrow-movement: 0.15em;
 
 
-/* Arrows that are used to gether with text (mostly as <span class="arrow">) */
+/* Arrows that are used together with text (mostly as <span class="arrow">) */
 .arrow {
     position: relative;
     width: 0.8em;
@@ -28,25 +28,12 @@ $arrow-movement: 0.15em;
         &::before {
             content: '\2192';
         }
-
-        // &:hover {
-        //     &::before {
-        //         left: $arrow-movement;
-        //     }
-        // }
     }
 
     &[data-orientation="down-right"] {
         &::before {
             content: '\2198';
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: $arrow-movement;
-        //         left: $arrow-movement;
-        //     }
-        // }
     }
 
     &[data-orientation="down"] {
@@ -54,51 +41,24 @@ $arrow-movement: 0.15em;
             content: '\2193'; // Arrow pointing down
             line-height: 1.5em;
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: $arrow-movement;
-        //     }
-        // }
     }
 
     &[data-orientation="down-left"] {
         &::before {
             content: '\2199'; // Arrow pointing down-left
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: $arrow-movement;
-        //         left: calc(-1 * $arrow-movement);
-        //     }
-        // }
     }
 
     &[data-orientation="left"] {
         &::before {
             content: '\2190'; // Arrow pointing left
         }
-
-        // &:hover {
-        //     &::before {
-        //         left: calc(-1 * $arrow-movement);
-        //     }
-        // }
-
     }
 
     &[data-orientation="up-left"] {
         &::before {
             content: '\2196'; // Arrow pointing up-left
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: calc(-1 * $arrow-movement);
-        //         left: calc(-1 * $arrow-movement);
-        //     }
-        // }
     }
 
     &[data-orientation="up"] {
@@ -106,25 +66,12 @@ $arrow-movement: 0.15em;
             content: '\2191'; // Arrow pointing up
             line-height: 1.4em;
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: calc(-1 * $arrow-movement);
-        //     }
-        // }
     }
 
     &[data-orientation="up-right"] {
         &::before {
             content: '\2197'; // Arrow pointing up-right
         }
-
-        // &:hover {
-        //     &::before {
-        //         top: calc(-1 * $arrow-movement);
-        //         left: $arrow-movement
-        //     }
-        // }
     }
 }
 

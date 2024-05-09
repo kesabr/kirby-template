@@ -1,14 +1,13 @@
 /* GRID */
 $grid-columns: 24; // must be dividable with 4 and 6 (12, 24, 36)
 $column-width: 1fr;
-$grid-gutter: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));
 
 @mixin grid-container {
     display: grid;
     grid-template-columns: repeat($grid-columns, $column-width);
-    gap: $grid-gutter;
-    margin-block: $grid-gutter;
-    // padding-inline: $grid-gutter;
+    gap: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));;
+    margin-block: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));;
+    // padding-inline: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));;
 }
 
 @mixin grid-item($columns: 1) {
@@ -187,17 +186,4 @@ $grid-gutter: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm)
     .grid-item-12 {
         @include grid-item(calc($grid-columns * (1 / 8)));
     }
-}
-
-/* Gap setting utility classes */
-.no-gap {
-    gap: 0;
-}
-
-.no-rowgap {
-    row-gap: 0;
-}
-
-.no-columngap {
-    column-gap: 0;
 }
