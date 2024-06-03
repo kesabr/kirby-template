@@ -37,8 +37,8 @@ $uniqueId = 'block_' . uniqid();
         <figcaption>
             <?= $caption ?>
         </figcaption>
-    <?php endif ?>
-</figure>
+    </figure>
+<?php endif ?>
 
 <script>
     // Get the figure element
