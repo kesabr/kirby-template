@@ -182,3 +182,9 @@
 .border-right { border-right: var(--border-width) solid var(--border-color); }
 .border-bottom { border-bottom: var(--border-width) solid var(--border-color); }
 .border-left { border-left: var(--border-width) solid var(--border-color); }
+
+
+/* Positioning */
+.position-r { position: relative; }
+.position-a { position: absolute; }
+.position-f { position: fixed; }
