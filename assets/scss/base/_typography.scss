@@ -14,36 +14,38 @@
 @mixin font-heading {
     font-size: var(--font-size-xl);
     line-height: var(--line-height-xl);
-    font-weight: var(--font-weight-bold);
     font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 @mixin font-subheading {
     font-size: var(--font-size-lg);
     line-height: var(--line-height-lg);
-    font-weight: var(--font-weight-bold);
     font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 @mixin font-small-heading {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
-    font-weight: var(--font-weight-bold);
     font-variation-settings: 'wght' var(--font-weight-bold);
 }
 
 @mixin font-text {
     font-size: var(--font-size-sm);
     line-height: var(--line-height-sm);
-    font-weight: var(--font-weight-normal);
     font-variation-settings: 'wght' var(--font-weight-normal);
 }
 
 @mixin font-infotext {
     font-size: var(--font-size-xs);
     line-height: var(--line-height-sm);
-    font-weight: var(--font-weight-normal);
     font-variation-settings: 'wght' var(--font-weight-normal);
+}
+
+// Body Styles
+body {
+    @include font-text;
+    font-family: var(--font-family-base);
+    color: var(--text-color);
 }
 
 // Heading Styles
@@ -61,13 +63,7 @@ h6 {
     color: inherit;
 }
 
-// Body Styles
-body {
-    @include font-text;
-    font-family: var(--font-family-base);
-    color: var(--text-color);
-}
-
+// Link styles
 a {
     color: var(--link-link);
 }
