@@ -13,7 +13,6 @@ snippet('site-structure', slots: true)
 
 <?php slot('default') ?>
 <!-- Add elements that should be displayed in the <main> -->
-<?= snippet('components/layout') ?>
 
 <?php endslot() ?>
 
@@ -23,8 +22,6 @@ snippet('site-structure', slots: true)
 
 <?php slot('foot') ?>
 <!-- Add elements that should be displayed right before the end of the </body> -->
-
-<?= snippet('components/glide') ?>
 
 <?php endslot() ?>
 
