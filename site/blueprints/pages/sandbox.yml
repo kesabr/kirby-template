@@ -2,27 +2,171 @@ title: Sandbox
 
 columns:
 
-  sandbox:
-    width: 1/1
+  col-1:
+    width: 1/3
     sections:
-
-      fields:
+      fields-1:
         type: fields
         fields:
-          accordion:
-            extends: fields/accordion
-            label: List
 
-          layout:
-            label: Banana
+          blocks:
+            type: blocks
+          
+          checkboxes:
+            type: checkboxes
+            options:
+              design: Design
+              architecture: Architecture
+              photography: Photography
+              3d: 3D
+              web: Web
+
+          color:
+            type: color
+
+          date:
+            type: date
+
+          email:
+            label: Email
+            type: email
+          
+          files:
+            type: files
+          
+          info:
+            label: Info
+            type: info
+            text: |
+              Dear editor,
+
+              each project should have a **cover.jpg**, which will be displayed in the project overview. You should also make sure to fill in all fields correctly.
+
+              In love,
+              Your admin
+          
+  col-2:
+    width: 1/3
+    sections:
+      fields-2:
+        type: fields
+        fields:
+            
+          layout: 
             extends: fields/layout
+          
+          link:
+            type: link
+
+          list:
+            type: list
+          
+          multiselect:
+            type: multiselect
+          
+          number:
+            type: number
+          
+          object:
+            type: object
+          
+          pages:
+            type: pages
+          
+          radio:
+            type: radio
+            options: 
+              design: Design
+              architecture: Architecture
+              photography: Photography
+              3d: 3D
+              web: Web
+          
+          range:
+            type: range
+            step: 100
+            min: 0
+            max: 10000
+          
+          select:
+            type: select
+            options:
+              design: Design
+              architecture: Architecture
+              photography: Photography
+              3d: 3D
+              web: Web
+          
+          slug:
+            type: slug
+            sync: text
+    
+  col-3:
+    width: 1/3
+    sections:
+      fields-3:
+        type: fields
+        fields:
+          
+          structure:
+            type: structure
+            fields:
+              street:
+                label: Street
+                type: text
+              zip:
+                label: ZIP
+                type: text
+              city:
+                label: City
+                type: text
+          
+          tags:
+            type: tags
+          
+          tel:
+            type: tel
+          
+          text:
+            type: text
+          
+          textarea:
+            type: textarea
+          
+          time:
+            type: time
+          
+          toggle:
+            type: toggle
+          
+          toggles:
+            type: toggles
+            options:
+              - value: left
+                text: Left
+                icon: text-left
+              - value: center
+                text: Center
+                icon: text-center
+              - value: right
+                text: Right
+                icon: text-right
+              - value: justify
+                text: Justify
+                icon: text-justify
+          
+          url:
+            type: url
+          
+          users:
+            type: users
+          
+          write:
+            type: write
+      
+      line:
+        type: line
 
       images:
-        label: Imageeeees
+        label: Images Section
         type: files
-        template: image 
-      
-      pdfs:
-        label: Der Pedeef
-        type: files
-        template: pdf 
