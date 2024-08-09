@@ -31,6 +31,12 @@ In the `site/templates/default.php` you can find a all use of the `slots()` meth
   
 `slot('foot')`      here you can add `<link>` or `<script>` tags right before the `<body>` tag closes  
 
+______________________
+
+## Configuration file
+In the folder `site/config` are two files to separate settings for dev and production.
+`config.php` as the general config file (debug mode is off).
+`config.localhost.php` as the localhost config file (debug mode is on).
 
 ______________________
 

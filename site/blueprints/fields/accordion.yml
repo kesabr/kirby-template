@@ -6,6 +6,10 @@
 
 title: Accordion
 
+label: 
+  en: Accordion
+  de: Akkordeon
+
 type: structure
 
 ## set what is displayed in the panel
@@ -20,16 +24,22 @@ columns:
 ## field options for the structure list 
 fields:
   title:
-    label: Titel
+    label: 
+      en: Title
+      de: Titel
     type: text
     icon: heading
 
   text:
-    label: Inhalt
+    label: 
+      en: Content
+      de: Inhalt
     extends: fields/writer
 
   images:
-    label: Bilder
+    label: 
+      en: Images
+      de: Bilder
     type: files
 
 ## setting options

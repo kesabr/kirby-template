@@ -1,5 +1,9 @@
 title: Layout
 
+label:
+  en: Page Layout
+  de: Seitenlayout
+
 type: layout
 layouts:
   - "1/1"
@@ -10,7 +14,9 @@ layouts:
   - "1/3, 1/3, 1/3"
 fieldsets:
   Text:
-    label: Text
+    label: 
+      en: Text
+      de: Text
     type: group
     fieldsets:
       - heading
@@ -18,14 +24,18 @@ fieldsets:
       - list
       - quote
   Media:
-    label: Media
+    label: 
+      en: Media
+      de: Medien
     type: group
     fieldsets:
       - image
       - gallery
       - Video
   Code:
-    label: Code
+    label: 
+      en: Code
+      de: Code
     type: group
     fieldsets:
       - code
