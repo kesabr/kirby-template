@@ -2,7 +2,7 @@
 
 return function($site) {
 
-    return $site->children();
+    return $site->children()->not('error');
     // return $site->children()->listed();
     
 };

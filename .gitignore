@@ -7,6 +7,9 @@
 # Ignore the vendor folder
 /vendor/
 
+# Ignore the content folder
+/content/
+
 # Ignore node modules (reinstallation: `npm install`)
 /node_modules/
 
@@ -15,3 +18,4 @@
 
 # Ignore all Plugins (reinstallation: `composer install`)
 /site/plugins/
+

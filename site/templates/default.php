@@ -1,6 +1,6 @@
 <?php
 /* MAIN SNIPPET * must be loaded in every template */
-snippet('site-structure', slots: true)
+snippet('page-structure', slots: true)
 ?>
 
 <?php slot('head') ?>

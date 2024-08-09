@@ -46,6 +46,7 @@ body {
     @include font-text;
     font-family: var(--font-family-base);
     color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
 }
 
 // Heading Styles

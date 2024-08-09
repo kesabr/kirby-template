@@ -2,7 +2,20 @@
 
 /** @var Kirby/CMS/page $page */
 
-@include_once ROOT_DIR . '/site/functions/fraction-to-class.php';
+// If the snippet is used multiple times check if the function already exists
+if (!function_exists('convertFractionToClassName')) {
+    function convertFractionToClassName($fraction) {
+        $fractionParts = explode('/', $fraction);
+
+        if (count($fractionParts) === 2 && is_numeric($fractionParts[0]) && is_numeric($fractionParts[1]) && $fractionParts[1] !== 0) {
+            $percentage = ($fractionParts[0] / $fractionParts[1]) * 100;
+            $roundedPercentage = floor($percentage);
+            return "grid-item-$roundedPercentage";
+        } else {
+            return 'grid-item-100';
+        }
+    }
+}
 
 ?>
 

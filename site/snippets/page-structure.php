@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 /** @var Kirby\Cms\Page $page */
 /** @var Kirby\Cms\Site $site */
 /** @var Kirby\Cms\Page $slots */
@@ -47,10 +48,10 @@
             <?= $footer ?>
         <?php endif ?>
     </footer>
-    
+
     <?= js('/assets/js/src/main.js', ['type' => 'module']) ?>
     <?= js('@auto', ['type' => 'module']) ?>
-    
+
     <?php if ($foot = $slots->foot()) : ?>
         <?= $foot ?>
     <?php endif ?>
