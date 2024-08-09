@@ -114,13 +114,15 @@ and render it by calling the snippet:
 
 #### Make Changes
 The single elements that get rendered inside the layout are "kirby block elements"   
-To change how these get rendered you can go to `site/snippets/blocks`  
+To change how these get rendered you can go to `site/snippets/blocks/`  
 get more info about it on [Kirby Reference](https://getkirby.com/docs/reference/panel/fields/blocks)   
 
 To change the Layout's structure see this `site/snippets/components/layout.php` file  
 
-The layout structure styling happens here:  
-`assets/scss/utilities/_grid.scss`
+Each layout column get's calculated to recieve a `grid-item-XX` class that determines their placement inside the `grid-container`.
+Those already have some responsiveness. To change that go to: `assets/scss/utilities/_grid.scss` for changing the grid layout itself or to `kirby-template/site/functions/fraction-to-class.php` to change the classes that are applied:
+`grid-item-XX`, `grid-item-XX-md` or `grid-item-XX-sm`.
+
 
 
 ### Text Cursor
