@@ -1,5 +1,7 @@
 <?php
-/**
+ /** @var Kirby\Cms\Page $page */
+
+ /**
  *  The Accordion builds on: 
  * 
  *  "site/blueprint/fields/accordion.yml"

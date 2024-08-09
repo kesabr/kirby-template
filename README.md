@@ -112,6 +112,11 @@ and render it by calling the snippet:
 <?= snippet('components/layout') ?>
 ```
 
+### VS Code settings
+This template expects you to use VS Code. If not, delete the `.vscode` directory.
+This directory also needs to be at the root of your workspace. So you might need to move it there.
+
+ 
 #### Make Changes
 The single elements that get rendered inside the layout are "kirby block elements"   
 To change how these get rendered you can go to `site/snippets/blocks/`  

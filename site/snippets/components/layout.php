@@ -1,6 +1,8 @@
 <?php 
 
-@include_once (__DIR__ . '/../functions/fraction-to-class.php');
+/** @var Kirby/CMS/page $page */
+
+@include_once ROOT_DIR . '/site/functions/fraction-to-class.php';
 
 ?>
 
