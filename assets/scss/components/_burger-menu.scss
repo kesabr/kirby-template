@@ -1,20 +1,16 @@
-$burger-button-width: var(--burger-button-width);
-$burger-button-height: var(--burger-button-height);
-
-$button-stroke-radius: 20px;
-
-#menu-button {
-    width: $burger-button-width;
-    height: $burger-button-height;
-    margin-top: calc( $burger-button-width - $burger-button-height );
+.menu-button {
+    width: var(--burger-button-width);
+    height: var(--burger-button-height);
+    // margin-top: calc( var(--burger-button-width) - var(--burger-button-height) );
     position: relative;
+    display: none;
     cursor: pointer;
 
     span {
         display: block;
         position: absolute;
         height: var(--burger-button-stroke);
-        // border-radius: $button-stroke-radius; // Shape the stroke endings; straight/ rounded
+        // border-radius: 20px; // Shape the stroke endings; straight/ rounded
         width: 100%;
         background: var(--color-primary);
         opacity: 1;
@@ -40,8 +36,8 @@ $button-stroke-radius: 20px;
     &.open {
         span.bar1 {
             transform: rotate(45deg);
-            top: calc($burger-button-height * -0.05);
-            left: calc($burger-button-width * 0.1);
+            top: calc(var(--burger-button-height) * -0.05);
+            left: calc(var(--burger-button-width) * 0.1);
         }
 
         span.bar2 {
@@ -51,8 +47,14 @@ $button-stroke-radius: 20px;
 
         span.bar3 {
             transform: rotate(-45deg);
-            top: calc($burger-button-height * 1.05);
-            left: calc($burger-button-width * 0.1);
+            top: calc(var(--burger-button-height) * 1.05);
+            left: calc(var(--burger-button-width) * 0.1);
         }
+    }
+}
+
+@media screen and (max-width: $breakpoint-md) {
+    .menu-button {
+        display: block;
     }
 }
