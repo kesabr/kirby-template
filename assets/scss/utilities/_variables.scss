@@ -2,9 +2,9 @@
 
     /* Buttons & Icons */
     --icon-size: 60px;
-    --burger-button-width: 60px;
-    --burger-button-height: 40px;
-    --burger-button-stroke: 5px;
+    --burger-button-width: clamp(30px, 20px + 2vw, 40px);
+    --burger-button-height: calc(var(--burger-button-width) * 2 / 3);
+    --burger-button-stroke: 3px;
 
 
     /* Typography */
