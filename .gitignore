@@ -17,5 +17,6 @@
 /assets/js/templates/
 
 # Ignore all Plugins (reinstallation: `composer install`)
-/site/plugins/
+/site/plugins/kirby-cookieconsent/
+/site/plugins/kirby3-cookie-banner/
 

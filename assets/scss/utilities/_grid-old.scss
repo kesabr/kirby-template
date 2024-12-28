@@ -1,0 +1,197 @@
+/* GRID */
+$grid-columns: 24; // must be dividable with 4, 6 and 8 (24, 48)
+$column-width: 1fr;
+
+@mixin grid-container {
+    display: grid;
+    grid-template-columns: repeat($grid-columns, $column-width);
+    gap: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));
+    ;
+    margin-block: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));
+    ;
+    // padding-inline: clamp(var(--margin-xs), var(--margin-xs) + 0.2vw, var(--margin-sm));;
+}
+
+@mixin grid-item($columns: 1) {
+    grid-column: span $columns;
+}
+
+/* Grid Container */
+.grid-container {
+    @include grid-container;
+
+    /* All children have * full column width * by default */
+    &>* {
+        @include grid-item(calc($grid-columns))
+    }
+}
+
+/* All items have * full column width * by default */
+.grid-item-100,
+.grid-item-75,
+.grid-item-66,
+.grid-item-50,
+.grid-item-33,
+.grid-item-25,
+.grid-item-16,
+.grid-item-12,
+.grid-item-100-md,
+.grid-item-75-md,
+.grid-item-66-md,
+.grid-item-50-md,
+.grid-item-33-md,
+.grid-item-25-md,
+.grid-item-16-md,
+.grid-item-12-md,
+.grid-item-100-sm {
+    @include grid-item($grid-columns);
+}
+
+/* Small */
+.grid-item-75-sm {
+    @include grid-item(calc($grid-columns * (3 / 4)));
+}
+
+.grid-item-66-sm {
+    @include grid-item(calc($grid-columns * (2 / 3)));
+}
+
+.grid-item-50-sm {
+    @include grid-item(calc($grid-columns * (1 / 2)));
+}
+
+.grid-item-33-sm {
+    @include grid-item(calc($grid-columns * (1 / 3)));
+}
+
+.grid-item-25-sm {
+    @include grid-item(calc($grid-columns * (1 / 4)));
+}
+
+.grid-item-16-sm {
+    @include grid-item(calc($grid-columns * (1 / 6)));
+}
+
+.grid-item-12-sm {
+    @include grid-item(calc($grid-columns * (1 / 8)));
+}
+
+
+
+@media (min-width: $breakpoint-xs) {
+
+    /* Small */
+    .grid-item-16-sm,
+    .grid-item-12-sm {
+        @include grid-item(calc($grid-columns * (1 / 4)));
+    }
+
+    /* Medium */
+    .grid-item-25-md,
+    .grid-item-16-md,
+    .grid-item-12-md {
+        @include grid-item(calc($grid-columns * (1 / 2)));
+    }
+}
+
+
+/* These grid items stay in * 2 columns * down to small devices */
+@media (min-width: $breakpoint-sm) {
+
+    /* Medium */
+    .grid-item-66-md,
+    .grid-item-50-md,
+    .grid-item-33-md {
+        @include grid-item(calc($grid-columns * (1 / 2)));
+    }
+
+    .grid-item-25-md,
+    .grid-item-16-md,
+    .grid-item-12-md {
+        @include grid-item(calc($grid-columns * (1 / 4)));
+    }
+
+}
+
+/* These grid items stay in * 2 columns * down to medium devices */
+@media (min-width: $breakpoint-md) {
+
+    /* Medium */
+    .grid-item-75-md {
+        @include grid-item(calc($grid-columns * (3 / 4)));
+    }
+
+    .grid-item-66-md {
+        @include grid-item(calc($grid-columns * (2 / 3)));
+    }
+
+    .grid-item-50-md {
+        @include grid-item(calc($grid-columns * (1 / 2)));
+    }
+
+    .grid-item-33-md {
+        @include grid-item(calc($grid-columns * (1 / 3)));
+    }
+
+    .grid-item-25-md {
+        @include grid-item(calc($grid-columns * (1 / 4)));
+    }
+
+    .grid-item-16-md {
+        @include grid-item(calc($grid-columns * (1 / 6)));
+    }
+
+    .grid-item-12-md {
+        @include grid-item(calc($grid-columns * (1 / 8)));
+    }
+
+    /* Standart */
+    .grid-item-75 {
+        @include grid-item($grid-columns);
+    }
+
+    .grid-item-66,
+    .grid-item-50,
+    .grid-item-33 {
+        @include grid-item(calc($grid-columns * (1 / 2)));
+    }
+
+    .grid-item-25,
+    .grid-item-16,
+    .grid-item-12 {
+        @include grid-item(calc($grid-columns * (1 / 4)));
+    }
+}
+
+/* All grid items reach full variety on large devices */
+@media (min-width: $breakpoint-lg) {
+
+    /* Standart */
+    .grid-item-75 {
+        @include grid-item(calc($grid-columns * (3 / 4)));
+    }
+
+    .grid-item-66 {
+        @include grid-item(calc($grid-columns * (2 / 3)));
+    }
+
+    .grid-item-50 {
+        @include grid-item(calc($grid-columns * (1 / 2)));
+    }
+
+    .grid-item-33 {
+        @include grid-item(calc($grid-columns * (1 / 3)));
+    }
+
+    .grid-item-25 {
+        @include grid-item(calc($grid-columns * (1 / 4)));
+    }
+
+    .grid-item-16 {
+        @include grid-item(calc($grid-columns * (1 / 6)));
+    }
+
+    .grid-item-12 {
+        @include grid-item(calc($grid-columns * (1 / 8)));
+    }
+}
